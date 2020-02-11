@@ -126,7 +126,6 @@ def stable_matching(participants: Participants) -> Stable_Matching:
                         # Engagement
                         engagements[proposer] = target
                         engagements[target] = proposer
-                        print(f"First match: {proposer} - {target}")
                     else:
                         # Pair already exists
                         current = current_match(target, engagements)
