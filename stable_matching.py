@@ -61,8 +61,7 @@ def other_side(current_side: str, all_sides: list) -> str:
 
 
 def all_preferences(participants: Participants) -> bool:
-    """Checks whether all participants have all participants of the other side in their own preference
-    """
+    """Checks whether all participants have all participants of the other side in their own preference"""
     sides = list(participants.keys())
     for side, people in participants.items():
         other_side_participants = participants[other_side(side, sides)]
@@ -99,7 +98,7 @@ def preferred(a: Person, b: Person, preferences: Preferences) -> Person:
 
 
 def stable_matching(participants: Participants) -> Stable_Matching:
-    """"""
+    """For a group of participants and their respective preferences of the other group, returns a list of stable matches according to the Gale–Shapley algorithm"""
     # The algorithm requires each participant expresses a preference that includes all other participants
     if not all_preferences(participants):
         raise MissingPreferences
