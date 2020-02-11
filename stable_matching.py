@@ -2,25 +2,9 @@
 Gale–Shapley stable matching algorithm
 Wikipedia: https://en.m.wikipedia.org/wiki/Gale%E2%80%93Shapley_algorithm
 
-algorithm stable_matching is
-    Initialize all m ∈ M and w ∈ W to free
-    while ∃ free man m who still has a woman w to propose to do
-        w := first woman on m's list to whom m has not yet proposed
-        if w is free then
-            (m, w) become engaged
-        else some pair (m', w) already exists
-            if w prefers m to m' then
-                m' becomes free
-                (m, w) become engaged 
-            else
-                (m', w) remain engaged
-            end if
-        end if
-    repeat
-
-Data structure
-
-participants = {
+### Data structure:
+# Participants
+{
     "side_A": {
         "abc": [
             "123", "451", "912"
@@ -45,11 +29,11 @@ participants = {
     }
 }
 
-Returns a list of stable matches
+# Stable matches
 [
-    ("123", "pqq"),
-    ("451", "abc"),
-    ("912", "asd")
+    ("asd", "912"),
+    ("ppq", "123"),
+    ("abc", "451")
 ]
 """
 from typing import List, Dict, Tuple
