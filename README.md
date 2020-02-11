@@ -1,2 +1,2 @@
 # Gale-Shapley
-Implementing the Gake-Sphaley stable marriage matching algorithm in Python.
+Implementing the Gale-Sphaley stable marriage matching algorithm in Python.
